@@ -10,7 +10,7 @@ return function()
   toggle = true --<c-x><c-f> should not fail
   feedkeys.keys("<c-x><c-f>", "n") --feedkeys.keys caches
 
-  local aug = augroups.Augroup("autocomp:file")
+  local aug = augroups.Augroup("icxcf://")
 
   aug:repeats("TextChangedI", { callback = function() feedkeys.keys("<c-x><c-f>", "n") end })
 
